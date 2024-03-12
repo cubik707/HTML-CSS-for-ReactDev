@@ -1,10 +1,16 @@
 import React from 'react';
-import {Icon} from "../icon/Icon";
+import logo from "../../assets/images/logo.webp";
+import styled from "styled-components";
 
 export const Logo = () => {
     return (
         <a href="">
-            <Icon iconId={'logo'}/>
+            <StyledLogo src={logo} alt="logo"/>
         </a>
     );
 };
+
+const StyledLogo = styled.img`
+    width: 79px;
+    height: 79px;
+`
