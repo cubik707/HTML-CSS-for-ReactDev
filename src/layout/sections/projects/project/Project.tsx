@@ -23,7 +23,6 @@ const StyledProject = styled.div`
     max-width: 270px;
     width: 25%;
     height: 394px;
-    margin: 19px;
 `
 
 const Image = styled.img`

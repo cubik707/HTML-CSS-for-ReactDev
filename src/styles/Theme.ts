@@ -1,5 +1,5 @@
 
-export const Theme = {
+export const theme = {
     colors: {
         primaryBgDark: "#222222",
         primaryBgLight: "#FFFFFF",

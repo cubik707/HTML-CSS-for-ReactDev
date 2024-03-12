@@ -4,7 +4,8 @@ import photo from "../../../assets/images/ava.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Programs} from "./programms/Programs";
 import {Icon} from "../../../components/icon/Icon";
-import {Container} from "../../../styles/Global.styled";
+import {Container} from "../../../components/Container";
+
 
 export const Main = () => {
     return (

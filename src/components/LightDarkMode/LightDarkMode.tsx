@@ -4,11 +4,9 @@ import styled from "styled-components";
 
 export const LightDarkMode = () => {
     return (
-        <div>
-            <StyledMoonButton>
-                <StyledMoon src={moon} alt = "light-dark-mode"/>
-            </StyledMoonButton>
-        </div>
+        <StyledMoonButton>
+            <StyledMoon src={moon} alt="light-dark-mode"/>
+        </StyledMoonButton>
     );
 };
 
