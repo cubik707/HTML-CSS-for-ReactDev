@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import styled, {createGlobalStyle} from "styled-components";
 
 export const GlobalStyled = createGlobalStyle`
     *, *::before, *::after{
@@ -29,5 +29,18 @@ export const GlobalStyled = createGlobalStyle`
         border: none;
     }
     
-    section:
 `
+
+export const Container = styled.div`
+    max-width: 1194px;
+    width: 100%;
+    border: 3px solid darkred;
+    height: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    
+    @media screen and (max-width: 1140px) {
+        padding: 0 47px;
+    }
+`
+
