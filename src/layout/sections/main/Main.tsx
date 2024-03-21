@@ -15,23 +15,25 @@ export const Main = () => {
             <MainTitle> designer , video editor , web developer </MainTitle>
             <Container>
                 <Info>
-                    <Photo src={photo}/>
-                    <TextBlock>
-                        <Name>I’m <AccentText>Alireza</AccentText> Kavousy nezjad</Name>
-                        <Text>Draft is a revolutionary mobile app built to help you manage your business easily and
-                            save your money.
-                        </Text>
-                        <FlexWrapper gap={"32px"} align={"center"}>
-                            <BtnLink href="#">
-                                See Projects
-                                <Icon width={"28px"} height={"28px"} viewBox={"0 0 28 28"}
-                                      iconId={"arrow-right"}/>
-                            </BtnLink>
-                            <Link href="#">
-                                Download Resume
-                            </Link>
-                        </FlexWrapper>
-                    </TextBlock>
+                    <FlexWrapper padding={"52px 0 52px 115px"}>
+                        <Photo src={photo}/>
+                        <TextBlock>
+                            <Name>I’m <AccentText>Alireza</AccentText> Kavousy nezjad</Name>
+                            <Text>Draft is a revolutionary mobile app built to help you manage your business easily and
+                                save your money.
+                            </Text>
+                            <FlexWrapper gap={"32px"} align={"center"}>
+                                <BtnLink href="#">
+                                    See Projects
+                                    <Icon width={"28px"} height={"28px"} viewBox={"0 0 28 28"}
+                                          iconId={"arrow-right"}/>
+                                </BtnLink>
+                                <Link href="#">
+                                    Download Resume
+                                </Link>
+                            </FlexWrapper>
+                        </TextBlock>
+                    </FlexWrapper>
                 </Info>
                 <FlexWrapper justify={"end"}>
                     <Programs></Programs>
@@ -59,16 +61,12 @@ const Info = styled.div`
     height: 507px;
     margin-top: 190px;
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 2px solid transparent;
-    border-image: linear-gradient(to top right, rgba(71, 71, 71, 0.3), rgba(131, 131, 131));
-    border-radius: 200px 0 200px 0;
-
-    backdrop-filter: blur(20px);
-    background: linear-gradient(to top right, rgba(57, 57, 57, 0.5), rgba(0, 66, 255, 0.05));
+    & > ${FlexWrapper}{
+        border: 2px solid rgba(102,102,102, 0.6);
+        border-radius: 200px 0 200px 0;
+        backdrop-filter: blur(10px);
+        background: linear-gradient(to top right, rgba(57, 57, 57, 0.2), rgba(0, 66, 255, 0.15));
+    }    
 
     &::before {
         content: "+";
@@ -96,6 +94,7 @@ const Info = styled.div`
     }
 
 `
+
 
 const Photo = styled.img`
     width: 401px;
