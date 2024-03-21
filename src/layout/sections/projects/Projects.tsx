@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Menu} from "../../../components/Menu/Menu";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Project} from "./project/Project";
 import photo1 from "../../../assets/images/photo1.webp"
@@ -10,7 +9,7 @@ import photo3 from "../../../assets/images/photo3.webp"
 import photo4 from "../../../assets/images/photo4.webp"
 import {Container} from "../../../components/Container";
 import {TabMenu} from "./tabMenu/TabMenu";
-import dots from "../../../assets/images/Dots.webp";
+import dots from "../../../assets/images/Dots.svg";
 
 const projectItems = ["Story", "Post", "Banner", "Trailer", "Desighn", "More"]
 
@@ -19,7 +18,7 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"}>
-                    <SectionTitle marginTop={"60px"} marginBottom = {"60px"}> Projects </SectionTitle>
+                    <SectionTitle paddingTop={"60px"} marginBottom = {"60px"}> Projects </SectionTitle>
                     <TabMenu menuItems={projectItems}/>
                     <FlexWrapper wrap ={"wrap"} gap={"38px"} justify={"start"} margin={"55px 0 150px 0"}>
                         <Project src={photo1} alt={photo1} title={"Story motion for sale English cources"}></Project>

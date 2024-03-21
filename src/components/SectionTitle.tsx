@@ -2,7 +2,7 @@ import styled from "styled-components";
 import {theme} from "../styles/Theme";
 
 type SectionTitlePropsType = {
-    marginTop?: string
+    paddingTop?: string
     marginBottom?: string
 }
 
@@ -12,7 +12,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     font-weight: 600;
     position: relative;
     margin-bottom: ${props => props.marginBottom || "90px" };
-    margin-top: ${props => props.marginTop || "90px" };
+    margin-top: ${props => props.paddingTop || "90px" };
 
     
     &::before {

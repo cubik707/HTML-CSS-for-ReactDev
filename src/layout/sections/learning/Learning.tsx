@@ -10,7 +10,7 @@ export const Learning = () => {
         <StyledLearning>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"}>
-                    <SectionTitle marginTop={"60px"} marginBottom={"70px"}>Learning</SectionTitle>
+                    <SectionTitle paddingTop={"60px"} marginBottom={"70px"}>Learning</SectionTitle>
                     <FlexWrapper direction={"column"} gap={"20px"} margin={"0 0 95px 155px"}>
                         <InfoBlock title={"After Effects & Photoshop"}/>
                         <InfoBlock title={"Website , Html & cSS"}/>

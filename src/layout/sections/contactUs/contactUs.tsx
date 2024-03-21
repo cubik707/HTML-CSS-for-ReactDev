@@ -15,7 +15,7 @@ export const ContactUs = () => {
         <StyledContactUs>
             <Container>
                 <FlexWrapper align={"center"} direction={"column"}>
-                    <SectionTitle marginTop={"65px"} marginBottom={"90px"}>Contact Us</SectionTitle>
+                    <SectionTitle paddingTop={"65px"} marginBottom={"90px"}>Contact Us</SectionTitle>
                     <ContactBlock>
                         <StyledForm>
                             <FormTitle>Get in touch</FormTitle>
