@@ -15,10 +15,12 @@ export const GlobalStyled = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: ${theme.colors.fontDark};
+        line-height: 1.2;
     }
     
     a{
         text-decoration: none;
+        color: ${theme.colors.fontDark};
     }
     
     ul{
@@ -30,6 +32,9 @@ export const GlobalStyled = createGlobalStyle`
         border: none;
     }
     
+    section:nth-child(odd){
+        background-color: ${theme.colors.primaryBgDark};
+    }
 `
 
 

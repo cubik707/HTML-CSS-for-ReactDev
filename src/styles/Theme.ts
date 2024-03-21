@@ -10,6 +10,9 @@ export const theme = {
 
         fontDark: "#FFFFFF",
         fontLight: "#393939",
+        placeholderColor: "#A5A5A5",
+
+        formBg: "#393838",
 
         projectDark: "#353535",
         projectLight: "#2C2B2B",

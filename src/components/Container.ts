@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     max-width: 1194px;
     width: 100%;
-    border: 3px solid darkred;
+    outline: 3px solid darkred;
     min-height: 100%;
     margin: 0 auto;
     flex-wrap: wrap;

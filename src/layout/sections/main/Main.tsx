@@ -5,36 +5,38 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Programs} from "./programms/Programs";
 import {Icon} from "../../../components/icon/Icon";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
+import {Button} from "../../../components/Button";
 
 
 export const Main = () => {
     return (
         <StyledMain>
+            <MainTitle> designer , video editor , web developer </MainTitle>
             <Container>
-                <FlexWrapper align={"center"} justify={"center"}>
+                <Info>
                     <Photo src={photo}/>
-                    <FlexWrapper direction={"column"}>
-                        <Name>I’m Alireza Kavousy nezjad</Name>
-                        <p>Draft is a revolutionary <MainTitle>mobile app</MainTitle> built to help you manage your business easily and
-                            save
-                            your money.
-                        </p>
-                        <FlexWrapper>
-                            <a href="#">
-                                <FlexWrapper>
-                                    <span>See Projects</span>
-                                    <Icon width={"28px"} height={"28px"} viewBox={"0 0 28 28"} iconId={"arrow-right"}/>
-                                </FlexWrapper>
-                            </a>
-                            <a href="#">
+                    <TextBlock>
+                        <Name>I’m <AccentText>Alireza</AccentText> Kavousy nezjad</Name>
+                        <Text>Draft is a revolutionary mobile app built to help you manage your business easily and
+                            save your money.
+                        </Text>
+                        <FlexWrapper gap={"32px"} align={"center"}>
+                            <BtnLink href="#">
+                                See Projects
+                                <Icon width={"28px"} height={"28px"} viewBox={"0 0 28 28"}
+                                      iconId={"arrow-right"}/>
+                            </BtnLink>
+                            <Link href="#">
                                 Download Resume
-                            </a>
+                            </Link>
                         </FlexWrapper>
-                    </FlexWrapper>
-                </FlexWrapper>
-                <FlexWrapper justify={"flex-end"}>
+                    </TextBlock>
+                </Info>
+                <FlexWrapper justify={"end"}>
                     <Programs></Programs>
                 </FlexWrapper>
+
             </Container>
         </StyledMain>
     );
@@ -42,18 +44,105 @@ export const Main = () => {
 
 const StyledMain = styled.div`
     min-height: 100vh;
-    background-color: rgb(201, 178, 222);
+    background-image: linear-gradient(to right, ${theme.colors.accentBgDark} 30%, ${theme.colors.primaryBgDark} 30%);
+    display: flex;
+`
+
+const MainTitle = styled.h1`
+    display: none;
+`
+
+const Info = styled.div`
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 507px;
+    margin-top: 190px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top right, rgba(71, 71, 71, 0.3), rgba(131, 131, 131));
+    border-radius: 200px 0 200px 0;
+
+    backdrop-filter: blur(20px);
+    background: linear-gradient(to top right, rgba(57, 57, 57, 0.5), rgba(0, 66, 255, 0.05));
+
+    &::before {
+        content: "+";
+        color: ${theme.colors.accentBgDark};
+        font-size: 150px;
+        font-weight: 800;
+
+        transform: rotate(45deg);
+        position: absolute;
+        top: -140px;
+        left: 370px;
+    }
+    
+    &::after{
+        content: "";
+        width: 152px;
+        height: 152px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 25px solid #24335C;
+        position: absolute;
+        bottom: -10px;
+        right: -2px;
+        z-index: -1;
+    }
+
 `
 
 const Photo = styled.img`
     width: 401px;
     height: 401px;
     object-fit: cover;
+
+    border-radius: 50%;
+    border: 25px solid white;
 `
 
-const MainTitle = styled.h1`
+const TextBlock = styled.div`
+    margin: 0 89px;
 `
 
-const Name = styled.h2`
+const Name = styled.span`
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
+`
 
+const AccentText = styled.span`
+    color: ${theme.colors.accent};
+`
+
+const Text = styled.p`
+    display: inline-block;
+    font-size: 20px;
+    padding: 19px 0 42px 0;
+    width: 376px;
+`
+
+const BtnLink = styled.a`
+    width: 200px;
+    height: 54px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 20px;
+    background-color: ${theme.colors.accent};
+    color: ${theme.colors.fontDark};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;    
+`
+
+const Link = styled.a`
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(108, 146, 255);
 `

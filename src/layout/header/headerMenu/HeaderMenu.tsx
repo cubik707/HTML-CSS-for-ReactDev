@@ -33,16 +33,11 @@ const StyledHeaderMenu = styled.nav`
     }
 `
 
-const ListItem = styled.li`
-    position: relative;
-`
-
 const Link = styled.a`
-    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 16px;
     text-align: center;
-    color: ${theme.colors.fontDark};
+    color: transparent;
 `
 
 const Mask = styled.span`
@@ -52,6 +47,47 @@ const Mask = styled.span`
     display: inline-block;
     height: 50%;
     overflow-y: hidden;
-    outline: 1px solid red;
-    color: ${theme.colors.accent};
+    //outline: 1px solid red;
+    color: ${theme.colors.fontDark};
+
+    & + & {
+        top: 50%;
+        span {
+            display: inline-block;
+            transform: translateY(-50%);
+        }
+    }
+`
+
+const ListItem = styled.li`
+    position: relative;
+    
+    &::before{
+        content: "";
+        display: inline-block;
+        height: 2px;
+        background-color: ${theme.colors.accent};
+        
+        position: absolute;
+        top: 50%;
+        left: -10px;
+        right: -10px;
+        z-index: 1;
+        transform: scale(0);
+        
+    }
+
+    &:hover {
+       &::before{
+           transform: scale(1);
+       } 
+        
+        ${Mask} {
+            transform: skewX(12deg) translateX(5px);
+
+            & + ${Mask} {
+                transform: skewX(12deg) translateX(-5px);
+            }
+        }
+    }
 `
