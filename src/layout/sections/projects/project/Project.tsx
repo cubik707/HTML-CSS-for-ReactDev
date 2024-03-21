@@ -19,7 +19,7 @@ export const Project = (props: ProjectPropsType) => {
     return (
         <StyledProject src={props.src}>
             <Info>
-                {/*<Image src={props.src} alt = {props.alt}/>*/}
+                <Image src={props.src} alt = {props.alt}/>
                 <Title>{props.title}</Title>
                 <FlexWrapper gap={"20px"} align={"center"} margin={"0 0 23px 0"}>
                     <LinkFilled href={"#"}> Edit for you </LinkFilled>
@@ -31,36 +31,33 @@ export const Project = (props: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div<StyledProjectProps>`
-    background-image: url(${props => props.src || "none"});
-    background-size: cover;
     max-width: 270px;
     width: 25%;
-    height: 394px;
-
-    
+    height: 394px;    
 
     display: flex;
     align-items: flex-end;
-
-    border-radius: 26px;
-
 `
 
-/*const Image = styled.img`
+const Image = styled.img`
     width: 100%;
     height: 240px;
     object-fit: cover;
-`*/
+    border-top-right-radius: 26px;
+    border-top-left-radius: 26px;
+`
 
 const Info = styled.div`
     background-color: ${theme.colors.projectDark};
+    border-radius: 26px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    border-bottom-right-radius: 26px;
-    border-bottom-left-radius: 26px;
+    
+    &:hover{
+        background-color: ${theme.colors.accentBgDark};
+    }
 `
 
 const Title = styled.h3`
@@ -85,6 +82,11 @@ const LinkFilled = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    &:hover{
+        background-color: ${theme.colors.accent};
+        color: ${theme.colors.fontDark};
+    }
 `
 
 const Link = styled.a`

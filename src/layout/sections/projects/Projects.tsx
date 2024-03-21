@@ -10,6 +10,7 @@ import photo4 from "../../../assets/images/photo4.webp"
 import {Container} from "../../../components/Container";
 import {TabMenu} from "./tabMenu/TabMenu";
 import dots from "../../../assets/images/Dots.svg";
+import {theme} from "../../../styles/Theme";
 
 const projectItems = ["Story", "Post", "Banner", "Trailer", "Desighn", "More"]
 
@@ -54,6 +55,19 @@ const StyledProjects = styled.section`
                 top: 90px
             }
         }
+    }
+    
+    &::before{
+        content: "+";
+        color: ${theme.colors.accentBgDark};
+        opacity: 0.4;
+        font-size: 450px;
+        font-weight: 800;
+
+        position: absolute;
+        transform: rotate(45deg);
+        right: -52px;
+        bottom: -63px;
     }
     
 `
