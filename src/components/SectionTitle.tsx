@@ -12,7 +12,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     font-weight: 600;
     position: relative;
     margin-bottom: ${props => props.marginBottom || "90px" };
-    margin-top: ${props => props.paddingTop || "90px" };
+    padding-top: ${props => props.paddingTop || "90px" };
 
     
     &::before {
