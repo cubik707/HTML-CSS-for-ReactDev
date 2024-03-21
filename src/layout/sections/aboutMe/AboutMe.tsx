@@ -6,6 +6,7 @@ import photo from "../../../assets/images/man.webp";
 import map from "../../../assets/images/map.webp"
 import {theme} from "../../../styles/Theme";
 import {Container} from "../../../components/Container";
+import marker from "../../../assets/images/marker.svg"
 
 export const AboutMe = () => {
     return (
@@ -13,7 +14,7 @@ export const AboutMe = () => {
             <Container>
                 <FlexWrapper align={"end"}>
                     <InfoBlock>
-                        <FlexWrapper align={"end"} gap={"15px"} justify={"end"}>
+                        <FlexWrapper gap={"15px"}>
                             <a href={"#"}>
                                 <svg width="26.000000" height="26.000000" viewBox="0 0 26 26"
                                      xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +76,7 @@ const InfoBlock = styled.div`
     background: linear-gradient(to top right, rgba(255, 255, 255, 0.5) -8.163%, rgba(0, 71, 255, 0.05) 103.54%);
     border: 2px solid rgba(255, 255, 255, 0.5);
 
-    padding: 30px 10px 65px 60px;
+    padding: 30px 30px 65px 60px;
 
 
     display: flex;
@@ -84,6 +85,10 @@ const InfoBlock = styled.div`
     align-items: center;
 
     z-index: 1;
+    
+    & > ${FlexWrapper}{
+        align-self: flex-end;
+    }
 `
 
 const Name = styled.span`
@@ -95,23 +100,18 @@ const Name = styled.span`
 `
 
 const Facts = styled.ul`
-
+    li + li {
+        margin-top: 5px;
+    }
 `
 
 const ListItem = styled.li`
     font-size: 20px;
     font-weight: 400;
     color: ${theme.colors.fontLight};
+    padding-left: 13px;
 
-    &::before {
-        content: "";
-        background-image: linear-gradient(to bottom, rgb(166, 188, 250), rgb(33, 87, 242) 100%);
-
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-
-        position: absolute;
-        left: 59px;
+    &::marker {
+        content: url(${marker});        
     }
 `
