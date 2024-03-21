@@ -19,9 +19,9 @@ export const Projects = () => {
         <StyledProjects>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"}>
-                    <SectionTitle paddingTop={"60px"} marginBottom = {"60px"}> Projects </SectionTitle>
+                    <SectionTitle marginBottom = {"60px"}> Projects </SectionTitle>
                     <TabMenu menuItems={projectItems}/>
-                    <FlexWrapper wrap ={"wrap"} gap={"38px"} justify={"start"} margin={"55px 0 150px 0"}>
+                    <FlexWrapper wrap ={"wrap"} gap={"38px"} justify={"start"} margin={"55px 0 0 0"}>
                         <Project src={photo1} alt={photo1} title={"Story motion for sale English cources"}></Project>
                         <Project src={photo2} alt={photo2} title={"Story motion for sale English cources"}></Project>
                         <Project src={photo3} alt={photo3} title={"Story motion for sale English cources"}></Project>
@@ -39,6 +39,7 @@ export const Projects = () => {
 
 
 const StyledProjects = styled.section`
+    padding: 60px 0 150px 0;
     position: relative;
     ${Container} {
         & > ${FlexWrapper} {
@@ -52,7 +53,7 @@ const StyledProjects = styled.section`
                 position: absolute;
                 z-index: -1;
                 left: 0;
-                top: 90px
+                top: 27px;
             }
         }
     }

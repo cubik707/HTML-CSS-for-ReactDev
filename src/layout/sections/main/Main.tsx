@@ -15,7 +15,7 @@ export const Main = () => {
             <MainTitle> designer , video editor , web developer </MainTitle>
             <Container>
                 <Info>
-                    <FlexWrapper padding={"52px 0 52px 115px"}>
+                    <FlexWrapper padding={"52px 0 52px 115px"} align={"center"}>
                         <Photo src={photo}/>
                         <TextBlock>
                             <Name>I’m <AccentText>Alireza</AccentText> Kavousy nezjad</Name>
@@ -45,9 +45,9 @@ export const Main = () => {
 };
 
 const StyledMain = styled.div`
-    min-height: 100vh;
     background-image: linear-gradient(to right, ${theme.colors.accentBgDark} 30%, ${theme.colors.primaryBgDark} 30%);
     display: flex;
+    padding: 190px 0 80px 0;
 `
 
 const MainTitle = styled.h1`
@@ -59,7 +59,6 @@ const Info = styled.div`
     z-index: 10;
     width: 100%;
     height: 507px;
-    margin-top: 190px;
     
     & > ${FlexWrapper}{
         border: 2px solid rgba(102,102,102, 0.6);

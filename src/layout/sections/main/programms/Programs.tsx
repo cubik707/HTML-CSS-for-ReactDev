@@ -22,7 +22,7 @@ const StyledPrograms = styled.div`
 /*    max-width: 681px;
     width: 100%;*/
     //border: 4px solid darkcyan;
-    padding: 50px 135px 80px 0;
+    padding: 50px 135px 0 0;
     display: flex;
     gap: 13px;
 `

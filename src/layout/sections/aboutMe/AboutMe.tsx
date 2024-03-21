@@ -12,7 +12,6 @@ export const AboutMe = () => {
         <AboutMeStyled>
             <Container>
                 <FlexWrapper align={"end"}>
-                    <MapImage src={map} alt={"Map"}/>
                     <InfoBlock>
                         <FlexWrapper align={"end"} gap={"15px"} justify={"end"}>
                             <a href={"#"}>
@@ -33,7 +32,6 @@ export const AboutMe = () => {
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                {/*<Icon iconId={"wa-border"}/>*/}
                             </a>
                             <a href={"#"}>
                                 <Icon width={"26px"} height={"26px"} viewBox={"0 0 26 26"} iconId={"ins-border"}/>
@@ -50,10 +48,7 @@ export const AboutMe = () => {
                             <ListItem>I’m designer , video editor , web developer and ...</ListItem>
                             <ListItem>My phone number in Iran +989212073348</ListItem>
                         </Facts>
-
-
                     </InfoBlock>
-                    <MeImage src={photo} alt={"My photo"}/>
                 </FlexWrapper>
             </Container>
 
@@ -63,22 +58,17 @@ export const AboutMe = () => {
 
 const AboutMeStyled = styled.section`
     background-color: #A6BCFA;
-    background-image: url("../../../assets/images/map.webp");
+    background-image: url(${photo}), url(${map});
+    background-position: 608px -16px, 55px 31px;
+    background-size: auto, 60%;
+    background-repeat: no-repeat;
 
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-`
-
-const MapImage = styled.img`
-    max-width: 881px;
-    max-height: 813px;
-    position: absolute;
-    top: 108px;
-    left: 95px;
+    padding: 400px 0 55px 0;
 `
 
 const InfoBlock = styled.div`
+    max-width: 563px;
+    width: 100%;
     box-sizing: border-box;
     border-radius: 100px 0 100px 0;
     backdrop-filter: blur(20px);
@@ -124,9 +114,4 @@ const ListItem = styled.li`
         position: absolute;
         left: 59px;
     }
-`
-
-const MeImage = styled.img`
-    width: 821px;
-    height: 946px;
 `

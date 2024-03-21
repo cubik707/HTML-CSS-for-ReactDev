@@ -10,8 +10,8 @@ export const Learning = () => {
         <StyledLearning>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"}>
-                    <SectionTitle paddingTop={"60px"} marginBottom={"70px"}>Learning</SectionTitle>
-                    <FlexWrapper direction={"column"} gap={"20px"} margin={"0 0 95px 155px"}>
+                    <SectionTitle marginBottom={"70px"}>Learning</SectionTitle>
+                    <FlexWrapper direction={"column"} gap={"20px"} margin={"0 0 0 155px"}>
                         <InfoBlock title={"After Effects & Photoshop"}/>
                         <InfoBlock title={"Website , Html & cSS"}/>
                     </FlexWrapper>
@@ -23,4 +23,5 @@ export const Learning = () => {
 
 const StyledLearning = styled.section`
     background-color: #24335C;
+    padding: 60px 0 95px 0;
 `

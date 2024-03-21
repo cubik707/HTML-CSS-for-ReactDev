@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {theme} from "../styles/Theme";
 
 type SectionTitlePropsType = {
-    paddingTop?: string
     marginBottom?: string
 }
 
@@ -11,10 +10,7 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     font-size: 32px;
     font-weight: 600;
     position: relative;
-    margin-bottom: ${props => props.marginBottom || "90px" };
-    padding-top: ${props => props.paddingTop || "90px" };
-
-    
+    margin-bottom: ${props => props.marginBottom || "90px" };    
     &::before {
         content: "";
         background-image: linear-gradient(to bottom, rgb(166, 188, 250), rgb(33, 87, 242) 100%);

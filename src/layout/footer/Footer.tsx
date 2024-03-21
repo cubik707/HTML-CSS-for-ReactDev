@@ -9,7 +9,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper direction={"column"} padding={"131px 0 75px 0"} align={"center"}>
+                <FlexWrapper direction={"column"} align={"center"}>
                     <Name> Coded by Alireza Kavousy nezhad </Name>
                     <Copyright> All Rights Reserved 2022 @</Copyright>
                 </FlexWrapper>
@@ -20,6 +20,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
+    padding: 130px 0 75px 0;
     background-color: ${theme.colors.primaryBgDark};
     background-image: url(${wave});
 `

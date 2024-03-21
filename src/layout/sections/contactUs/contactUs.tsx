@@ -15,7 +15,7 @@ export const ContactUs = () => {
         <StyledContactUs>
             <Container>
                 <FlexWrapper align={"center"} direction={"column"}>
-                    <SectionTitle paddingTop={"65px"} marginBottom={"90px"}>Contact Us</SectionTitle>
+                    <SectionTitle marginBottom={"90px"}>Contact Us</SectionTitle>
                     <ContactBlock>
                         <StyledForm>
                             <FormTitle>Get in touch</FormTitle>
@@ -165,6 +165,7 @@ export const ContactUs = () => {
 
 const StyledContactUs = styled.section`
     background-color: ${theme.colors.primaryBgDark};
+    padding: 65px 0 200px 0;
 `
 
 const ContactBlock = styled.div`
@@ -235,7 +236,7 @@ const Button = styled.button`
 const SocialIconsList = styled.ul`
     display: flex;
     gap: 30px;
-    margin: 65px 0 198px 0;
+    margin-top: 65px;
 `
 
 const SocialListItem = styled.li`

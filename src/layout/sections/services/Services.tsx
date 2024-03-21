@@ -10,8 +10,8 @@ export const Services = () => {
         <StyledServices>
             <Container>
                 <FlexWrapper align={"center"} direction={"column"}>
-                    <SectionTitle paddingTop={"50px"} marginBottom={"80px"}>Services</SectionTitle>
-                    <FlexWrapper gap={"30px"} margin={"0 0 95px 0"}>
+                    <SectionTitle marginBottom={"80px"}>Services</SectionTitle>
+                    <FlexWrapper gap={"30px"}>
                         <Service iconId={"video-play"} text={"Video Edit Service"}/>
                         <Service iconId={"edit"} text={"Ui/Ux Designer"}/>
                         <Service iconId={"notebook"} text={"Website Developer"}/>
@@ -24,4 +24,5 @@ export const Services = () => {
 };
 
 const StyledServices = styled.section`
+    padding: 50px 0 95px 0;
 `
