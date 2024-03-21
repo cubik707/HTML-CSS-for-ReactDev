@@ -17,9 +17,9 @@ export const Service = (props: ServicePropsType) => {
                 <Title>{props.text}</Title>
 
                 <Link href={"#"}>
-                    <FlexWrapper gap={"15px"}>
+                    <FlexWrapper gap={"13px"} align={"center"}>
                         View More
-                        <Icon width={"21px"} height={"21px"} viewBox={"0 0 21 21"} iconId={"arrow-right"}/>
+                        <Icon fill={"#2157F2"} width={"21px"} height={"21px"} viewBox={"0 0 30 30"} iconId={"arrow-right"}/>
                     </FlexWrapper>
                 </Link>
             </FlexWrapper>

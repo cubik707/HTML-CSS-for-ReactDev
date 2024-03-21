@@ -17,7 +17,6 @@ export const Services = () => {
                         <Service iconId={"notebook"} text={"Website Developer"}/>
                     </FlexWrapper>
                 </FlexWrapper>
-
             </Container>
         </StyledServices>
     );
